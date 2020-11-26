@@ -1,0 +1,13 @@
+crlf		text
+-crlf		-text
+crlf=input	eol=lf
+
+*.form		eol=crlf
+*.vcproj	eol=crlf
+*.sh		eol=lf
+*.jpg		-text
+*.xml		eol=crlf
+.*		eol=crlf
+*.properties   	eol=crlf
+
+

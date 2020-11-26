@@ -1,0 +1,47 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /auth
+    
+spring:
+  application:
+    name: auth
+#  jpa:
+#    show-sql: true
+#    database-platform: org.hibernate.dialect.Oracle12cDialect
+#    hibernate:
+#      use-new-id-generator-mappings: false
+#      ddl-auto: create
+#  datasource:
+#    url: jdbc:oracle:thin:@//localhost:32771/ORCLCDB
+#    username: c##edie
+#    password: c##edie
+#    driver-class-name: oracle.jdbc.OracleDriver
+#    hikari:
+#      minimumIdle: 5
+#      maximumPoolSize: 20
+#      idleTimeout: 30000
+#      maxLifetime: 2000000
+#      connectionTimeout: 30000
+#      poolName: HikariPoolBooks
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservices
+    username: postgres
+    password: postgresql1020
+    
+eureka:
+  instance: 
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/registry/eureka
